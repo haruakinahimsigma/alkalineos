@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101513">
+  <title>Alkaline OS — Companion</title>
+  <style>
+    :root { color-scheme: dark; --bg:#0b0f0e; --panel:#121a17; --line:#263a31; --text:#edf6ef; --muted:#9db0a4; --accent:#a3f36b; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:radial-gradient(ellipse at top right,#1c3527 0,transparent 45%),var(--bg); color:var(--text); font:16px/1.6 ui-sans-serif,system-ui,-apple-system,sans-serif; }
+    main { width:min(960px,calc(100% - 32px)); margin:0 auto; padding:42px 0 64px; }
+    header { display:flex; align-items:center; gap:14px; margin-bottom:44px; }
+    .logo { width:48px;height:48px;display:grid;place-items:center;border:1px solid #5c8c48;border-radius:14px;color:var(--accent);font-size:25px; }
+    .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.16em; font-size:12px; font-weight:700; }
+    h1 { font-size:clamp(36px,7vw,64px); letter-spacing:-.05em; line-height:1.02; margin:10px 0 16px; }
+    h2 { font-size:19px; margin:0 0 10px; }
+    p { color:var(--muted); margin:0 0 14px; }
+    .hero { padding:32px; border:1px solid var(--line); border-radius:24px; background:linear-gradient(135deg,rgba(25,42,32,.92),rgba(15,22,19,.92)); }
+    .pill { display:inline-flex; align-items:center; gap:8px; border:1px solid #3d5d39; color:var(--accent); border-radius:99px; padding:5px 10px; font-size:12px; font-weight:700; }
+    .dot { width:7px;height:7px;border-radius:50%;background:var(--accent); }
+    .grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:16px; }
+    .card { border:1px solid var(--line); border-radius:18px; padding:22px; background:rgba(18,26,23,.9); }
+    .card .symbol { font-size:25px; margin-bottom:10px; }
+    code { color:#d9ffbd; background:#1b2921; border:1px solid #2d4436; border-radius:6px; padding:2px 6px; }
+    a { color:var(--accent); }
+    footer { border-top:1px solid var(--line); margin-top:28px; padding-top:18px; color:var(--muted); font-size:13px; }
+    @media(max-width:560px){ main{padding-top:24px}.hero{padding:23px}header{margin-bottom:28px} }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="logo" aria-hidden="true">A</div>
+      <div><strong>ALKALINE OS</strong><div class="eyebrow">Hobby operating system project</div></div>
+    </header>
+    <section class="hero">
+      <span class="pill"><span class="dot"></span> PROJECT ONLINE</span>
+      <h1>A fresh boot.<br>From the ground up.</h1>
+      <p>Alkaline OS is a learning project to build a bootable operating system, one milestone at a time. This site is its web companion — the kernel runs separately in an emulator.</p>
+      <p><a href="https://github.com/haruakinahimsigma/alkalineos">View the source on GitHub →</a></p>
+    </section>
+    <section class="grid" aria-label="Project status">
+      <article class="card"><div class="symbol">⌁</div><h2>Boot sector</h2><p>First milestone: a 512-byte x86 BIOS boot sector that prints a startup message and halts.</p><p>Status: <strong>starter committed</strong></p></article>
+      <article class="card"><div class="symbol">⌘</div><h2>Build it</h2><p>Use a Linux workspace with NASM and QEMU, then run <code>./build.sh</code> and boot the generated image.</p></article>
+      <article class="card"><div class="symbol">↗</div><h2>Next milestones</h2><p>Second-stage loader, freestanding kernel, serial logging, memory management, interrupts, and eventually a shell.</p><p><a href="https://github.com/haruakinahimsigma/alkalineos/blob/main/docs/NEXT_STEPS.md">Read the roadmap →</a></p></article>
+    </section>
+    <footer>Alkaline OS is an experimental hobby project. This web page is not the operating system itself and does not boot or emulate the kernel. iPadOS remains untouched.</footer>
+  </main>
+</body>
+</html>
