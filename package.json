@@ -1,0 +1,12 @@
+{
+  "name": "alkaline-os-companion",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Web companion and development dashboard for Alkaline OS",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
